@@ -49,9 +49,9 @@ $ docker-compose run -it -v `pwd`:/data \
 ```
 
 
-## Shell Shortcut Wrapper
+## Shell Wrapper
 
-Download/copy the included `bin/markdown` shell wrapper to your `/usr/local/bin/markdown` on your system (or elsewhere) for easier use:
+Download/copy/modify the included `bin/markdown` shell wrapper to your `/usr/local/bin/markdown` on your system (or elsewhere) for easier use:
 
 ```
 $ markdown example/test.md
