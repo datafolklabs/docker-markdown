@@ -27,7 +27,7 @@ $ docker run -it -v /path/to/data:/data datafolklabs/markdown the_file_name.md
 *From this repo...*
 
 ```
-$ docker-compose run -it -v `pwd`:/data datafolklabs/markdown example/test.md
+$ docker run -it -v `pwd`:/data datafolklabs/markdown example/test.md
 <h1>Header 1</h1>
 <h2>Header 2</h2>
 <p>Testing: </p>
@@ -44,7 +44,7 @@ $ docker-compose run -it -v `pwd`:/data datafolklabs/markdown example/test.md
 Includes the [pymdown-extensions](http://facelessuser.github.io/pymdown-extensions/):
 
 ```
-$ docker-compose run -it -v `pwd`:/data \
+$ docker run -it -v `pwd`:/data \
     datafolklabs/markdown -x pymdownx.github example/test.md
 ```
 
