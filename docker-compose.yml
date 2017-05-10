@@ -1,0 +1,7 @@
+version: "3"
+services:
+    markdown:
+        image: datafolklabs/markdown:${TAG:-development}
+        build: .
+        volumes:
+            - .:/data
