@@ -35,7 +35,7 @@ $ docker-compose run -it -v `pwd`:/data datafolklabs/markdown example/test.md
 
 ## Extensions
 
-Includes the [pymdown-extensions](http://facelessuser.github.io/pymdown-extensions/) extensions:
+Includes the [pymdown-extensions](http://facelessuser.github.io/pymdown-extensions/):
 
 ```
 $ docker-compose run -it -v `pwd`:/data \
