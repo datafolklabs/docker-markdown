@@ -22,7 +22,7 @@ if [ ! -f "$ABS_PATH" ]; then
 fi
 
 docker run -it -v ${SRC_DIR}:/data \
-        datafolklabs/markdown:latest -x pymdownx.github \
+        datafolklabs/markdown:latest -x pymdownx.github -x extra \
         /data/${FILE}
 
 exit 0
