@@ -2,6 +2,15 @@
 
 This is a simple Docker implementation of the [Python Markdown](https://pypi.python.org/pypi/Markdown) library/utility.  It's purpose is to make it easy to generate HTML from [Markdown](https://daringfireball.net/projects/markdown/) files via Docker.
 
+## Getting It
+
+Available From [Docker Hub](https://hub.docker.com/r/datafolklabs/markdown/).
+
+
+```bash
+$ docker pull datafolklabs/markdown:latest
+```
+
 ## Usage
 
 ```bash
@@ -32,3 +41,8 @@ Includes the [pymdown-extensions](http://facelessuser.github.io/pymdown-extensio
 $ docker-compose run -it -v `pwd`:/data \
     datafolklabs/markdown -x pymdownx.github example/test.md
 ```
+
+## Future?
+
+If this thing gets any interest, I'll be happy to take it to the next level
+of development and implement any feature request that come in.
