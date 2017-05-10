@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+if [ -z "$1" ]; then
+    echo "Markdown Source Path Required!"
+    exit 1
+fi
+
+function abspath() {
+    cd "$(dirname "$1")"
+    printf "%s/%s\n" "$(pwd)" "$(basename "$1")"
+    cd "$OLDPWD"
+}
+
+ABS_PATH=$(abspath $1)
+SRC_DIR=$(dirname $ABS_PATH)
+FILE=$(basename $ABS_PATH)
+
+if [ ! -f "$ABS_PATH" ]; then
+    echo "Markdown File Does Not Exist: ${ABS_PATH}"
+    exit 1
+fi
+
+docker run -it -v ${SRC_DIR}:/data \
+        datafolklabs/markdown:latest -x pymdownx.github \
+        /data/${FILE}
+
+exit 0
